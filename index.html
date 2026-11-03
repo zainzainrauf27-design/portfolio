@@ -1,47 +1,831 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050914">
-<meta name="description" content="WEB BY ZAINI — web development, business software, Android apps and digital solutions.">
-<title>WEB BY ZAINI — Developer & Digital Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050b18">
+<title>WEB BY ZAINI | Digital Developer</title>
+
 <style>
-:root{--bg:#050914;--panel:#091426;--panel2:#0b1a2d;--cyan:#00e5ff;--blue:#1677ff;--text:#f4f8ff;--muted:#a8b8cf;--line:rgba(94,190,255,.2);--max:1200px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),91%);margin:auto}.cyan{color:var(--cyan)}.muted{color:var(--muted)}.section{padding:92px 0;position:relative}.kicker{color:var(--cyan);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}.heading{font-size:clamp(2rem,4.5vw,3.35rem);line-height:1.12;letter-spacing:-.045em;margin:10px 0 16px}.intro{max-width:670px;color:var(--muted);margin:0}.section-head{margin-bottom:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border-radius:999px;border:1px solid var(--cyan);font-weight:800;font-size:.9rem;transition:.22s ease;cursor:pointer}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px #00e5ff30}.primary{background:linear-gradient(100deg,var(--cyan),#65f1ff);color:#03101a}.outline{background:#03101a88;color:var(--text)}
-header{position:sticky;top:0;z-index:50;background:#050914d9;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-size:1.25rem;font-weight:950;letter-spacing:-.04em;white-space:nowrap}.logo span{color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:26px;font-size:.88rem;color:#d1def0}.navlinks a:hover,.social a:hover{color:var(--cyan)}.menubtn{display:none;color:white;background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
-.hero{min-height:640px;display:flex;align-items:center;padding:55px 0 65px;position:relative;isolation:isolate}.hero-grid{display:grid;grid-template-columns:.92fr 1.05fr .58fr;gap:28px;align-items:center}.portrait-stage{position:relative;min-height:470px;display:flex;align-items:end;justify-content:center;isolation:isolate}.portrait{width:100%;max-width:400px;max-height:540px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 0 28px #007bff20);animation:portraitFloat 5.5s ease-in-out infinite;transform-origin:center bottom;mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%)}.orbit-label{position:absolute;bottom:35px;left:0;color:var(--cyan);font-size:1.1rem;font-weight:700;font-style:italic;transform:rotate(-8deg)}.hero-copy{position:relative}.hero h1{font-size:clamp(2.7rem,5vw,4.9rem);line-height:.99;letter-spacing:-.065em;margin:17px 0 20px}.hero h1 span{display:block;background:linear-gradient(90deg,#00e5ff,#168cff 78%);background-clip:text;color:transparent}.hero-copy>p:not(.kicker){color:#c2d0e3;max-width:600px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}.stats{display:flex;gap:25px;margin-top:25px}.stat{padding-left:16px;border-left:1px solid #00e5ff55}.stat strong{display:block;color:var(--cyan);font-size:1.25rem}.stat small{display:block;color:var(--muted);font-size:.75rem}.quick-services{display:grid;gap:13px}.quick{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);background:#071426b8;border-radius:13px;backdrop-filter:blur(8px);transition:.2s}.quick:hover{border-color:var(--cyan);transform:translateX(-3px)}.qicon,.service-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;color:var(--cyan);border:1px solid #00e5ff65;background:#00e5ff0d;font-size:1.25rem;flex-shrink:0}.quick b{display:block;font-size:.86rem}.quick small{display:block;color:var(--muted);font-size:.74rem}
-.grid{display:grid;gap:17px}.services-layout{display:grid;grid-template-columns:.78fr 1.6fr;gap:38px;align-items:center}.service-grid{grid-template-columns:repeat(3,1fr)}.card{border:1px solid var(--line);background:linear-gradient(145deg,#0b192bdb,#07101edb);border-radius:16px;padding:23px;transition:transform .25s,border-color .25s,box-shadow .25s}.card:hover{transform:translateY(-5px);border-color:#00e5ff75;box-shadow:0 12px 35px #001a3840}.card h3{margin:13px 0 7px;font-size:1.05rem}.card p{color:var(--muted);font-size:.9rem;margin:0}.about-grid{display:grid;grid-template-columns:1fr .9fr;gap:45px;align-items:center}.about-panel{padding:28px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(145deg,#0b1c30,#06101d)}.checks{list-style:none;margin:20px 0 0;padding:0}.checks li{margin:9px 0;color:#d5e2f3}.checks li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:10px}.traits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.trait{border:1px solid var(--line);border-radius:12px;padding:14px;color:#dbe8f7;background:#071323}.trait span{color:var(--cyan);margin-right:8px}
-.projects{grid-template-columns:repeat(3,1fr)}.project{padding:0;overflow:hidden}.project-art{height:165px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#007dff55,transparent 45%),linear-gradient(135deg,#10233b,#06101d);border-bottom:1px solid var(--line);font-size:2.6rem;color:var(--cyan)}.project-body{padding:21px}.label{font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--cyan);font-weight:800}.project-body h3{margin:8px 0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tag{font-size:.72rem;color:#c9d9eb;border:1px solid var(--line);border-radius:7px;padding:4px 8px}.project-links{display:flex;gap:15px;margin-top:17px;font-size:.8rem;color:var(--cyan)}.project-links a:hover{text-decoration:underline}.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}.skillbox{border:1px solid var(--line);background:#081426;border-radius:17px;padding:24px}.skillbox h3{margin:0 0 14px}.skill-list{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:9px 12px;border:1px solid var(--line);border-radius:10px;color:#dce9fa;background:#07101e;font-size:.84rem}.process{grid-template-columns:repeat(4,1fr)}.step{border-top:2px solid var(--cyan);padding-top:16px}.step-num{color:var(--cyan);font-size:.78rem;font-weight:900;letter-spacing:.12em}.step h3{margin:8px 0}.step p{color:var(--muted);font-size:.88rem;margin:0}.contact-panel{border:1px solid #00e5ff55;border-radius:22px;padding:clamp(25px,5vw,55px);background:radial-gradient(ellipse at 0 100%,#005bff25,transparent 48%),linear-gradient(120deg,#0a1c31,#06101d);display:flex;align-items:center;justify-content:space-between;gap:25px}.contact-panel p{max-width:650px;color:var(--muted)}.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.contact-side{min-width:190px;display:grid;gap:12px}.contact-side a{border:1px solid var(--line);padding:11px 13px;border-radius:11px;color:#dce9fa;font-size:.86rem}.contact-side a:hover{border-color:var(--cyan);color:var(--cyan)}footer{border-top:1px solid var(--line);padding:23px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-row p{font-size:.8rem;color:var(--muted);margin:0}.social{display:flex;gap:16px;font-size:.84rem}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}.scrolltop{position:fixed;right:20px;bottom:20px;z-index:20;width:42px;height:42px;border-radius:50%;border:1px solid #00e5ff77;background:#071426;color:var(--cyan);display:none;cursor:pointer}.scrolltop.show{display:block}
-@keyframes portraitFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-9px) scale(1.012)}}
-@media(max-width:1000px){.hero-grid{grid-template-columns:.8fr 1.2fr}.quick-services{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}.quick{align-items:flex-start}.services-layout{grid-template-columns:1fr}.service-grid{grid-template-columns:repeat(3,1fr)}.contact-panel{align-items:flex-start;flex-direction:column}.contact-side{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}}
-@media(max-width:720px){.nav{height:68px}.menubtn{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 5%;background:#050914f7;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:15px}.navlinks.open{display:flex}.navlinks .btn{width:100%}.hero{padding:32px 0 55px}.hero-grid{grid-template-columns:1fr;gap:24px}.portrait-stage{min-height:360px;max-height:440px;grid-row:1}.portrait{max-height:430px;width:auto;max-width:100%}.hero-copy{grid-row:2}.quick-services{grid-row:3;grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(2.65rem,12vw,4rem)}.stats{gap:15px}.section{padding:68px 0}.service-grid,.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid,.skills-layout{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:470px){.service-grid,.projects,.quick-services,.process{grid-template-columns:1fr}.portrait-stage{min-height:320px}.portrait{max-height:370px}.stats{justify-content:space-between;gap:8px}.stat{padding-left:9px}.stat strong{font-size:1.1rem}.contact-side{grid-template-columns:1fr}.card{padding:19px}.project{padding:0}.project-body{padding:17px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:root {
+ --bg:#050b18;
+ --card:#0c192b;
+ --cyan:#00e5ff;
+ --blue:#168bff;
+ --white:#f4f8ff;
+ --muted:#a6b5c9;
+ --border:#1b3048;
+}
+
+* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+html {scroll-behavior:smooth;}
+
+body {
+ background:var(--bg);
+ color:var(--white);
+ font-family:Arial, sans-serif;
+ line-height:1.7;
+ overflow-x:hidden;
+}
+
+a {text-decoration:none;color:inherit;}
+
+.container {
+ width:90%;
+ max-width:1200px;
+ margin:auto;
+}
+
+.accent {color:var(--cyan);}
+
+header {
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:rgba(5,11,24,.96);
+ border-bottom:1px solid var(--border);
+ backdrop-filter:blur(15px);
+}
+
+nav {
+ min-height:75px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:20px;
+}
+
+.logo {
+ font-size:22px;
+ font-weight:900;
+}
+
+.logo span {color:var(--cyan);}
+
+.nav-links {
+ display:flex;
+ align-items:center;
+ gap:25px;
+}
+
+.nav-links a {
+ color:var(--muted);
+ font-size:14px;
+ transition:.3s;
+}
+
+.nav-links a:hover {color:var(--cyan);}
+
+.menu-btn {
+ display:none;
+ background:none;
+ border:1px solid var(--cyan);
+ color:white;
+ padding:8px 13px;
+ border-radius:8px;
+}
+
+.btn {
+ display:inline-block;
+ padding:11px 20px;
+ border-radius:30px;
+ border:1px solid var(--cyan);
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn-primary {
+ background:var(--cyan);
+ color:#03101a;
+}
+
+.btn:hover {
+ transform:translateY(-4px);
+ box-shadow:0 5px 25px #00e5ff35;
+}
+
+section {padding:85px 0;}
+
+.hero {
+ min-height:650px;
+ display:flex;
+ align-items:center;
+}
+
+.hero-grid {
+ display:grid;
+ grid-template-columns:.85fr 1.3fr;
+ gap:55px;
+ align-items:center;
+}
+
+.profile {
+ position:relative;
+ max-width:380px;
+ margin:auto;
+}
+
+.profile img {
+ width:100%;
+ aspect-ratio:3/4;
+ object-fit:cover;
+ object-position:top;
+ border-radius:15px;
+ border:1px solid var(--border);
+ animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+ 0%,100% {transform:translateY(0)}
+ 50% {transform:translateY(-10px)}
+}
+
+.profile-label {
+ position:absolute;
+ bottom:15px;
+ left:-12px;
+ background:#061324;
+ border:1px solid var(--cyan);
+ color:var(--cyan);
+ padding:7px 15px;
+ border-radius:25px;
+ font-weight:bold;
+}
+
+.eyebrow {
+ color:var(--cyan);
+ letter-spacing:3px;
+ font-size:12px;
+ font-weight:bold;
+}
+
+h1 {
+ font-size:clamp(42px,6vw,75px);
+ line-height:1.1;
+ margin:20px 0;
+}
+
+.gradient {
+ background:linear-gradient(90deg,var(--cyan),var(--blue));
+ -webkit-background-clip:text;
+ color:transparent;
+}
+
+.hero p,.description {
+ color:var(--muted);
+}
+
+.hero-actions {
+ display:flex;
+ flex-wrap:wrap;
+ gap:12px;
+ margin:25px 0;
+}
+
+.stats {
+ display:flex;
+ gap:25px;
+ margin-top:30px;
+}
+
+.stats strong {
+ color:var(--cyan);
+ display:block;
+ font-size:21px;
+}
+
+.stats small {color:var(--muted);}
+
+.section-title {
+ margin-bottom:35px;
+}
+
+.section-title h2 {
+ font-size:clamp(30px,4vw,45px);
+ margin:8px 0;
+}
+
+.section-title p {
+ color:var(--muted);
+ max-width:700px;
+}
+
+.about-grid {
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:25px;
+}
+
+.panel,.project-card {
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:17px;
+}
+
+.panel {padding:27px;}
+
+.panel p {color:var(--muted);}
+
+.check-list {
+ list-style:none;
+ margin:15px 0;
+}
+
+.check-list li {margin:10px 0;}
+
+.check-list li:before {
+ content:"✓";
+ color:var(--cyan);
+ margin-right:12px;
+ font-weight:bold;
+}
+
+.service-grid,.project-grid {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.service-card {
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:15px;
+ padding:25px;
+ transition:.3s;
+}
+
+.service-card:hover,.project-card:hover {
+ transform:translateY(-7px);
+ border-color:var(--cyan);
+ box-shadow:0 10px 30px #00e5ff12;
+}
+
+.service-icon {
+ font-size:30px;
+ color:var(--cyan);
+ margin-bottom:12px;
+}
+
+.service-card p {
+ color:var(--muted);
+ font-size:14px;
+}
+
+.project-card {
+ overflow:hidden;
+ transition:.3s;
+}
+
+.project-visual {
+ height:155px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background:linear-gradient(135deg,#102b48,#071324);
+ border-bottom:1px solid var(--border);
+ font-size:48px;
+ color:var(--cyan);
+}
+
+.project-body {padding:22px;}
+
+.project-category {
+ font-size:11px;
+ letter-spacing:2px;
+ color:var(--cyan);
+ font-weight:bold;
+}
+
+.project-body h3 {
+ margin:9px 0;
+ font-size:20px;
+}
+
+.project-body p {
+ color:var(--muted);
+ font-size:14px;
+ min-height:75px;
+}
+
+.tags {
+ display:flex;
+ flex-wrap:wrap;
+ gap:7px;
+ margin:15px 0;
+}
+
+.tag {
+ font-size:11px;
+ border:1px solid var(--border);
+ padding:4px 9px;
+ border-radius:6px;
+ color:#c6d6e9;
+}
+
+.project-link {
+ display:inline-block;
+ color:var(--cyan);
+ font-size:13px;
+ font-weight:bold;
+ margin-top:8px;
+}
+
+.skills-grid {
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:20px;
+}
+
+.skill-list {
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+ margin-top:15px;
+}
+
+.skill-list span {
+ background:#102238;
+ border:1px solid var(--border);
+ border-radius:8px;
+ padding:8px 12px;
+ font-size:13px;
+}
+
+.contact-box {
+ padding:40px;
+ background:var(--card);
+ border:1px solid #00e5ff55;
+ border-radius:20px;
+}
+
+.contact-box p {
+ color:var(--muted);
+ margin:10px 0;
+}
+
+.contact-actions {
+ display:flex;
+ flex-wrap:wrap;
+ gap:12px;
+ margin-top:22px;
+}
+
+footer {
+ border-top:1px solid var(--border);
+ padding:25px 0;
+ color:var(--muted);
+ font-size:13px;
+}
+
+.footer-row {
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+ flex-wrap:wrap;
+}
+
+.reveal {
+ opacity:0;
+ transform:translateY(25px);
+ transition:.7s;
+}
+
+.reveal.show {
+ opacity:1;
+ transform:translateY(0);
+}
+
+@media(max-width:850px) {
+ .hero-grid {grid-template-columns:1fr;}
+ .profile {max-width:320px;}
+ .service-grid,.project-grid {grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:650px) {
+ .menu-btn {display:block;}
+ .nav-links {
+  display:none;
+  position:absolute;
+  top:75px;
+  left:0;
+  width:100%;
+  background:#07111f;
+  padding:20px;
+  flex-direction:column;
+ }
+ .nav-links.open {display:flex;}
+ .service-grid,.project-grid,
+ .about-grid,.skills-grid {grid-template-columns:1fr;}
+ section {padding:60px 0;}
+ .hero {padding:45px 0;}
+ .stats {gap:15px;}
+ .contact-box {padding:25px;}
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after {
+  animation:none!important;
+  transition:none!important;
+  scroll-behavior:auto!important;
+ }
+ .reveal {opacity:1;transform:none;}
+}
 </style>
 </head>
+
 <body>
-<header><nav class="nav wrap" aria-label="Main navigation"><a class="logo" href="#home">WEB BY <span>ZAINI.</span></a><button class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">☰ Menu</button><div class="navlinks" id="navLinks"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact" class="btn outline">↗ Let's Talk</a></div></nav></header>
+
+<header>
+<nav class="container">
+<a href="#home" class="logo">WEB BY <span>ZAINI.</span></a>
+
+<button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-grid">
-<div class="portrait-stage"><img class="portrait" src="./zaini-profile.png" alt="Zaini in a navy business suit, WEB BY ZAINI founder" fetchpriority="high"><div class="orbit-label">Zaini · Developer</div></div>
-<div class="hero-copy"><p class="kicker">Developer + Digital Agency</p><h1>Ideas into <span>Digital Reality.</span></h1><p>I'm Zaini, a developer building modern websites, practical business software and Android app experiences that help businesses grow online.</p><div class="actions"><a class="btn primary" href="#projects">▣ View My Projects</a><a class="btn outline" href="#contact">➤ Start a Project</a></div><div class="stats"><div class="stat"><strong>Web</strong><small>Development</small></div><div class="stat"><strong>Apps</strong><small>Digital Solutions</small></div><div class="stat"><strong>UI/UX</strong><small>Design Focus</small></div></div></div>
-<div class="quick-services"><a class="quick" href="#services"><span class="qicon">▣</span><span><b>Web Development</b><small>Modern & Responsive</small></span></a><a class="quick" href="#services"><span class="qicon">▤</span><span><b>Business Software</b><small>Custom Solutions</small></span></a><a class="quick" href="#services"><span class="qicon">▯</span><span><b>Android Apps</b><small>Mobile Experiences</small></span></a><a class="quick" href="#services"><span class="qicon">✧</span><span><b>UI/UX Design</b><small>Clean & Modern</small></span></a><a class="quick" href="#services"><span class="qicon">⚙</span><span><b>Maintenance</b><small>Ongoing Support</small></span></a></div>
-</div></section>
-<section class="section" id="services"><div class="wrap services-layout"><div class="section-head reveal"><p class="kicker">What I Offer</p><h2 class="heading">Professional Services for <span class="cyan">Your Business</span></h2><p class="intro">From simple websites to custom business software, I create digital solutions tailored to your needs.</p><div class="actions"><a class="btn outline" href="#contact">Explore Services →</a></div></div><div class="grid service-grid">
-<article class="card reveal"><div class="service-icon">▣</div><h3>Website Development</h3><p>Business websites, landing pages and portfolios.</p></article><article class="card reveal"><div class="service-icon">▤</div><h3>Business Software</h3><p>Dashboards, records and management tools.</p></article><article class="card reveal"><div class="service-icon">▯</div><h3>Android Applications</h3><p>Mobile app experiences and APK projects.</p></article><article class="card reveal"><div class="service-icon">✧</div><h3>UI/UX Design</h3><p>Modern, clear and user-friendly interfaces.</p></article><article class="card reveal"><div class="service-icon">⌁</div><h3>Website Modernization</h3><p>Update, improve and refine existing sites.</p></article><article class="card reveal"><div class="service-icon">⚙</div><h3>Maintenance & Support</h3><p>Bug fixes and agreed ongoing improvements.</p></article></div></div></section>
-<section class="section" id="about"><div class="wrap about-grid"><div class="reveal"><p class="kicker">About Me</p><h2 class="heading">Turning Ideas into <span class="cyan">Real Solutions</span></h2><p class="intro">I'm Zaini, an independent developer growing WEB BY ZAINI into a digital development brand. I enjoy solving problems and creating useful, accessible technology for businesses and individuals.</p><ul class="checks"><li>Responsive and mobile-friendly experiences</li><li>Practical tools for everyday business tasks</li><li>Careful testing and continuous learning</li><li>Clear communication from idea to delivery</li></ul><div class="actions"><a class="btn outline" href="#contact">Work With Me →</a></div></div><div class="about-panel reveal"><p class="kicker">My Approach</p><h3 class="heading" style="font-size:1.65rem">Build with purpose.</h3><p class="muted">Every project starts by understanding the real problem, planning the right solution, and testing the result on the devices people use.</p><div class="traits"><div class="trait"><span>✦</span>Problem Solver</div><div class="trait"><span>◎</span>Fast Learner</div><div class="trait"><span>↗</span>Growth Mindset</div><div class="trait"><span>♡</span>Quality Focused</div></div></div></div></section>
-<section class="section" id="projects"><div class="wrap"><div class="section-head reveal"><p class="kicker">Featured Projects</p><h2 class="heading">Selected <span class="cyan">Work & Experiments</span></h2><p class="intro">Replace demo links with your actual public project URLs. Only describe features and results you can verify.</p></div><div class="grid projects">
-<article class="card project reveal"><div class="project-art">▤</div><div class="project-body"><span class="label">Business Software</span><h3>Future Pharma</h3><p class="muted">Pharmacy management website and business workflow project.</p><div class="tags"><span class="tag">Web App</span><span class="tag">Database</span></div><div class="project-links"><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="#contact">Details ↗</a></div></div></article>
-<article class="card project reveal"><div class="project-art">◈</div><div class="project-body"><span class="label">Agency Website</span><h3>WEB BY ZAINI</h3><p class="muted">Developer and digital agency portfolio, built for a premium online presence.</p><div class="tags"><span class="tag">HTML/CSS</span><span class="tag">Responsive</span></div><div class="project-links"><a href="#home">This Website ↗</a><a href="#contact">Contact ↗</a></div></div></article>
-<article class="card project reveal"><div class="project-art">▯</div><div class="project-body"><span class="label">Mobile Application</span><h3>Pharma Mapping</h3><p class="muted">A mapping project concept for locating pharmacy-related information.</p><div class="tags"><span class="tag">Android</span><span class="tag">Web</span></div><div class="project-links"><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="#contact">Details ↗</a></div></div></article>
-</div></div></section>
-<section class="section" id="skills"><div class="wrap"><div class="section-head reveal"><p class="kicker">Skills & Technologies</p><h2 class="heading">Tools I Work <span class="cyan">With</span></h2><p class="intro">Edit this list to match your current skills and experience.</p></div><div class="skills-layout"><div class="skillbox reveal"><h3>Web & Data</h3><div class="skill-list"><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">Supabase</span><span class="skill">Responsive Design</span></div></div><div class="skillbox reveal"><h3>Apps & Workflow</h3><div class="skill-list"><span class="skill">Android Studio</span><span class="skill">Capacitor</span><span class="skill">UI/UX</span><span class="skill">Debugging</span><span class="skill">Testing</span><span class="skill">Deployment</span><span class="skill">Documentation</span></div></div></div></div></section>
-<section class="section" id="process"><div class="wrap"><div class="section-head reveal"><p class="kicker">My Process</p><h2 class="heading">Simple Steps, <span class="cyan">Clear Results</span></h2><p class="intro">A practical workflow keeps every project focused and organized.</p></div><div class="grid process"><div class="step reveal"><span class="step-num">01 / DISCOVER</span><h3>Understand</h3><p>Discuss goals, users and requirements.</p></div><div class="step reveal"><span class="step-num">02 / DESIGN</span><h3>Plan</h3><p>Map the layout, features and user journey.</p></div><div class="step reveal"><span class="step-num">03 / BUILD</span><h3>Develop & Test</h3><p>Build the solution and test key flows.</p></div><div class="step reveal"><span class="step-num">04 / LAUNCH</span><h3>Deliver</h3><p>Publish the agreed work and plan updates.</p></div></div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="contact-panel reveal"><div><p class="kicker">Let's Work Together</p><h2 class="heading">Have a Project <span class="cyan">in Mind?</span></h2><p>Tell me what you want to build — a website, business tool or mobile app. Get in touch to discuss the idea and next steps.</p><div class="contact-actions"><a class="btn primary" id="whatsappLink" href="https://wa.me/923327021212" target="_blank" rel="noopener noreferrer">☏ WhatsApp Me ↗</a><a class="btn outline" id="emailLink" href="mailto:zainzainrauf27@gmail.com">✉ Send Email ↗</a></div></div><div class="contact-side"><a href="https://github.com/" target="_blank" rel="noopener noreferrer">⌘ &nbsp; GitHub Profile ↗</a><a href="mailto:zainzainrauf27@gmail.com">✉ &nbsp; zainzainrauf27@gmail.com</a><a href="#home">↑ &nbsp; Back to Top</a></div></div></div></section>
-</main><footer><div class="wrap footer-row"><a class="logo" href="#home">WEB BY <span>ZAINI.</span></a><p>© <span id="year"></span> WEB BY ZAINI. Build. Improve. Repeat.</p><div class="social"><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#contact">Contact</a></div></div></footer><button class="scrolltop" id="scrollTop" aria-label="Back to top">↑</button>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-grid">
+
+<div class="profile">
+<img src="zaini-profile.png" alt="Zaini">
+<div class="profile-label">Zaini · Developer</div>
+</div>
+
+<div>
+<div class="eyebrow">DEVELOPER + DIGITAL AGENCY</div>
+
+<h1>
+Ideas into<br>
+<span class="gradient">Digital Reality.</span>
+</h1>
+
+<p>
+I'm Zaini, an independent developer building modern
+websites, business software and Android applications
+that help businesses work smarter and grow online.
+</p>
+
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">View My Projects →</a>
+<a class="btn" href="#contact">Start a Project</a>
+</div>
+
+<div class="stats">
+<div><strong>Web</strong><small>Development</small></div>
+<div><strong>Apps</strong><small>Digital Solutions</small></div>
+<div><strong>UI/UX</strong><small>Design Focus</small></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<div class="section-title reveal">
+<div class="eyebrow">ABOUT ME</div>
+<h2>Turning Ideas into <span class="accent">Real Solutions</span></h2>
+<p>
+I'm an independent developer growing WEB BY ZAINI
+into a digital development brand.
+</p>
+</div>
+
+<div class="about-grid">
+
+<div class="reveal">
+<ul class="check-list">
+<li>Responsive and mobile-friendly experiences</li>
+<li>Practical business software solutions</li>
+<li>Careful testing and continuous improvement</li>
+<li>Clear communication from idea to delivery</li>
+</ul>
+<a class="btn" href="#contact">Work With Me →</a>
+</div>
+
+<div class="panel reveal">
+<div class="eyebrow">MY APPROACH</div>
+<h3>Build with purpose.</h3>
+<p>
+Every project starts by understanding the real problem,
+planning the right solution and testing the result.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+
+<div class="section-title reveal">
+<div class="eyebrow">WHAT I OFFER</div>
+<h2>Professional <span class="accent">Digital Services</span></h2>
+<p>Technology solutions for businesses and individuals.</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card reveal">
+<div class="service-icon">⌘</div>
+<h3>Website Development</h3>
+<p>Business websites, portfolios and responsive web applications.</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">▤</div>
+<h3>Business Software</h3>
+<p>Custom management software, dashboards and business workflows.</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">▯</div>
+<h3>Android Applications</h3>
+<p>Mobile application development and Android solutions.</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">✧</div>
+<h3>UI/UX Design</h3>
+<p>Modern layouts, attractive interfaces and user-friendly designs.</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">↻</div>
+<h3>Website Maintenance</h3>
+<p>Website improvements, updates and technical support.</p>
+</div>
+
+<div class="service-card reveal">
+<div class="service-icon">⚙</div>
+<h3>Custom Solutions</h3>
+<p>Digital tools designed around specific business requirements.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ALL FIVE PROJECTS -->
+<section id="projects">
+<div class="container">
+
+<div class="section-title reveal">
+<div class="eyebrow">PORTFOLIO SHOWCASE</div>
+<h2>My Featured <span class="accent">Projects</span></h2>
+<p>
+A selection of software, websites and application projects.
+</p>
+</div>
+
+<div class="project-grid">
+
+<!-- PROJECT 1 -->
+<article class="project-card reveal">
+<div class="project-visual">▤</div>
+<div class="project-body">
+<div class="project-category">PHARMACY MANAGEMENT</div>
+<h3>Future Pharma</h3>
+<p>
+Pharmacy management platform with product,
+customer, order, sector and business record management.
+</p>
+<div class="tags">
+<span class="tag">Web App</span>
+<span class="tag">Database</span>
+<span class="tag">Supabase</span>
+</div>
+<a class="project-link" href="https://zainzainrauf27-design.github.io/Future-Pharma-/">
+Explore Project ↗
+</a>
+</div>
+</article>
+
+<!-- PROJECT 2 -->
+<article class="project-card reveal">
+<div class="project-visual">▥</div>
+<div class="project-body">
+<div class="project-category">WHOLESALE SOFTWARE</div>
+<h3>S.A.B Trader</h3>
+<p>
+Wholesale business software project for managing
+products, customers, sales and business records.
+</p>
+<div class="tags">
+<span class="tag">Business Software</span>
+<span class="tag">Inventory</span>
+<span class="tag">Management</span>
+</div>
+<a class="project-link" href="#contact">
+Project Details ↗
+</a>
+</div>
+</article>
+
+<!-- PROJECT 3 -->
+<article class="project-card reveal">
+<div class="project-visual">▦</div>
+<div class="project-body">
+<div class="project-category">SCHOOL MANAGEMENT</div>
+<h3>Doctor Public School</h3>
+<p>
+School management project focused on digital
+administration and organized school workflows.
+</p>
+<div class="tags">
+<span class="tag">Education</span>
+<span class="tag">Management</span>
+<span class="tag">Web Application</span>
+</div>
+<a class="project-link" href="#contact">
+Project Details ↗
+</a>
+</div>
+</article>
+
+<!-- PROJECT 4 -->
+<article class="project-card reveal">
+<div class="project-visual">◈</div>
+<div class="project-body">
+<div class="project-category">DIGITAL AGENCY</div>
+<h3>WEB BY ZAINI</h3>
+<p>
+A developer and digital agency portfolio
+showcasing services, projects and online presence.
+</p>
+<div class="tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+</div>
+<a class="project-link" href="#home">
+Visit Website ↗
+</a>
+</div>
+</article>
+
+<!-- PROJECT 5 -->
+<article class="project-card reveal">
+<div class="project-visual">⌖</div>
+<div class="project-body">
+<div class="project-category">ANDROID APPLICATION</div>
+<h3>Pharma Mapping</h3>
+<p>
+Mobile application concept for locating
+pharmacy-related information and locations.
+</p>
+<div class="tags">
+<span class="tag">Android</span>
+<span class="tag">Maps</span>
+<span class="tag">Mobile App</span>
+</div>
+<a class="project-link" href="#contact">
+Project Details ↗
+</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+
+<div class="section-title reveal">
+<div class="eyebrow">SKILLS & TECHNOLOGIES</div>
+<h2>Tools I Work <span class="accent">With</span></h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="panel reveal">
+<h3>Web & Data</h3>
+<div class="skill-list">
+<span>HTML5</span>
+<span>CSS3</span>
+<span>JavaScript</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>Supabase</span>
+<span>Responsive Design</span>
+</div>
+</div>
+
+<div class="panel reveal">
+<h3>Apps & Workflow</h3>
+<div class="skill-list">
+<span>Android Studio</span>
+<span>Capacitor</span>
+<span>UI/UX</span>
+<span>Debugging</span>
+<span>Testing</span>
+<span>Documentation</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+<div class="contact-box reveal">
+<div class="eyebrow">LET'S WORK TOGETHER</div>
+<h2>Have a project in mind?</h2>
+
+<p>
+Let's discuss your next website, business software
+or mobile application project.
+</p>
+
+<div class="contact-actions">
+<a class="btn btn-primary"
+href="https://wa.me/923327021212"
+target="_blank" rel="noopener">
+WhatsApp: 03327021212
+</a>
+
+<a class="btn"
+href="mailto:zainzainrauf27@gmail.com">
+Send Email
+</a>
+</div>
+
+<p>Email: zainzainrauf27@gmail.com</p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-row">
+<div class="logo">WEB BY <span>ZAINI.</span></div>
+<div>© <span id="year"></span> WEB BY ZAINI. All rights reserved.</div>
+<div>Developer + Digital Agency</div>
+</div>
+</footer>
+
 <script>
-const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕ Close':'☰ Menu'});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰ Menu'}));
-document.getElementById('year').textContent=new Date().getFullYear();
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const reveals=document.querySelectorAll('.reveal');if('IntersectionObserver'in window&&!reduced){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});reveals.forEach(el=>observer.observe(el))}else reveals.forEach(el=>el.classList.add('show'));
-const topBtn=document.getElementById('scrollTop');window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>500),{passive:true});topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
-</script></body></html>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+ const opened = navLinks.classList.toggle("open");
+ menuBtn.setAttribute("aria-expanded", opened);
+ menuBtn.textContent = opened ? "✕ Close" : "☰ Menu";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+ link.addEventListener("click", () => {
+  navLinks.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuBtn.textContent = "☰ Menu";
+ });
+});
+
+document.getElementById("year").textContent =
+ new Date().getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+  if(entry.isIntersecting) {
+   entry.target.classList.add("show");
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:0.1});
+
+document.querySelectorAll(".reveal").forEach(element => {
+ observer.observe(element);
+});
+</script>
+
+</body>
+  </html>
+  
